@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP1_Algo03_VincentSChevrier")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f82c41fcaa923410471bff040d7d02010b32eae6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90312ac114093b659903ab5ad1b6bbccda9a3818")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP1_Algo03_VincentSChevrier")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP1_Algo03_VincentSChevrier")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
