@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace TP1_Algo03_VincentSChevrier
 {
-    public class Verbaflora : Plante, IParler
+    public interface IDeplacement
     {
-        public Verbaflora(string nom, int positionX, int positionY) : base(nom, positionX, positionY)
-        {
-
-        }
+        void Deplacement();
     }
 }

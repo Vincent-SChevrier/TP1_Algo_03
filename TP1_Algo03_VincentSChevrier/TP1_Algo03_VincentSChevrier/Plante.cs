@@ -8,6 +8,14 @@ namespace TP1_Algo03_VincentSChevrier
 {
     public class Plante : Organisme
     {
+        public Plante(string nom, int positionX, int positionY) : base(nom, positionX, positionY)
+        {
 
+        }
+
+        public void Deplacement()
+        {
+            // Logique de déplacement
+        }
     }
 }

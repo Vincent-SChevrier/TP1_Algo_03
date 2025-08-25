@@ -8,6 +8,9 @@ namespace TP1_Algo03_VincentSChevrier
 {
     public class Cryptolingua : Creature
     {
+        public Cryptolingua(string nom, int positionX, int positionY, int vitesse, int nbCasesDeplacer) : base(nom, positionX, positionY, vitesse, nbCasesDeplacer)
+        {
 
+        }
     }
 }

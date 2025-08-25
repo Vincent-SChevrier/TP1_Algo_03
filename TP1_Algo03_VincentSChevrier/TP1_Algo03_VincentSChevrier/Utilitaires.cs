@@ -12,19 +12,20 @@ namespace TP1_Algo03_VincentSChevrier
         {
             string chaineOriginal = "abcdefghijklmnopqrstuvwxyz";
             string chaineEncrypte = "cjdgoyhktvxfzelquapwmbsnri";
+            string newChaineChar = "";
 
-            foreach (char lettre in chaineChar)
+            for (int i = 0; i > chaineChar.Length; i++)
             {
-                for (int i = 0; i > chaineOriginal.Length; i++)
+                foreach(char lettre in chaineOriginal)
                 {
-                    if (chaineChar[i] == chaineOriginal[i])
+                    if (lettre == chaineChar[i])
                     {
-                        chaineChar[i] == chaineEncrypte[i];
+                        newChaineChar.Add(chaineEncrypte[i]);
                     }
                 }
             }
 
-            return 
+            return newChaineChar;
         }
     }
 }
