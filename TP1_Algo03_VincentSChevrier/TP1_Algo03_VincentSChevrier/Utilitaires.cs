@@ -20,7 +20,7 @@ namespace TP1_Algo03_VincentSChevrier
                 {
                     if (lettre == chaineChar[i])
                     {
-                        newChaineChar.Add(chaineEncrypte[i]);
+                        newChaineChar += (chaineEncrypte[chaineOriginal.IndexOf(lettre)]);
                     }
                 }
             }

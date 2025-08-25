@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP1_Algo03_VincentSChevrier
 {
-    class View
+    public class View
     {
     }
 }
