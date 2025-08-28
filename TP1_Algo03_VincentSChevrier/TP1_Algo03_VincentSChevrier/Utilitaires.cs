@@ -14,10 +14,9 @@ namespace TP1_Algo03_VincentSChevrier
         /// </summary>
         /// <param name="message">Message à crypter.</param>
         /// <returns>Message crypté.</returns>
-        public static string Cryptage(string message)
+        public static string Cryptage(string message, string chaineEncrypte)
         {
             string chaineOriginal = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string chaineEncrypte = "cjdgoyhktvxfzelquapwmbsnriCJDGOYHKTVXFZELQUAPWMBSNRI";
             string newChaineChar = string.Empty;
 
             for (int i = 0; i < message.Length; i++)

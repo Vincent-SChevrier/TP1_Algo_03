@@ -16,6 +16,7 @@ namespace TP1_Algo03_VincentSChevrier
         /// <param name="positionY">Position sur l'axe des Y de la Cryptolingua.</param>
         public Cryptolingua(int positionX, int positionY) : base("Cryptolingua", positionX, positionY, 3)
         {
+
         }
 
         /// <summary>
@@ -24,7 +25,8 @@ namespace TP1_Algo03_VincentSChevrier
         /// <param name="message">Message à dire.</param>
         public void Parler(string message)
         {
-            Console.WriteLine($"Cryptolingua dit : {Utilitaires.Cryptage(message)}");
+            string chaineEncrypte = "cjdgoyhktvxfzelquapwmbsnriCJDGOYHKTVXFZELQUAPWMBSNRI";
+            Console.WriteLine($"Cryptolingua dit : {Utilitaires.Cryptage(message, chaineEncrypte)}");
         }
     }
 }

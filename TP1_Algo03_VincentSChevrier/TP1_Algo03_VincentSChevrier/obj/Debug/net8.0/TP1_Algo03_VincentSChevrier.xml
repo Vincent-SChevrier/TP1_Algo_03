@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TP1_Algo03_VincentSChevrier</name>
+    </assembly>
+    <members>
+        <member name="T:TP1_Algo03_VincentSChevrier.Ambuloflora">
+            <summary>
+            Classe représentant une Ambuloflora, une plante qui peut se déplacer.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Ambuloflora.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructeur de l'Ambuloflora.
+            </summary>
+            <param name="positionX">Position de l'Ambuloflora sur l'axe des X.</param>
+            <param name="positionY">Position de l'Ambuloflora sur l'axe des Y.</param>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Ambuloflora.Deplacement(System.Int32,System.Int32)">
+            <summary>
+            Fonction de déplacement de l'Ambuloflora.
+            On utilise un compteur pour compter le nombre de pas effectués.
+            Math.Abs pour gérer les déplacements négatifs.
+            </summary>
+            <param name="deplacementX">Nombre de pas à faire sur l'axe des X.</param>
+            <param name="deplacementY">Nombre de pas à faire sur l'axe des Y.</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Creature">
+            <summary>
+            Classe représentant une créature qui peut se déplacer.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Creature.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructeur de la créature.
+            </summary>
+            <param name="nom">Nom de la créature.</param>
+            <param name="positionX">Posision sur l'axe des X de la créature.</param>
+            <param name="positionY">Position sur l'axe des Y de la créature.</param>
+            <param name="vitesse">Vitess de la créature.</param>
+        </member>
+        <member name="P:TP1_Algo03_VincentSChevrier.Creature.Vitesse">
+            <summary>
+            Propriété représentant la vitesse de déplacement de la créature.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Creature.Deplacement(System.Int32,System.Int32)">
+            <summary>
+            Fonction de déplacement de la créature.
+            </summary>
+            <param name="deplacementX">Nombre de pas à faire sur l'axe des X.</param>
+            <param name="deplacementY">Nombre de pas à faire sur l'axe des Y.</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Cryptolingua">
+            <summary>
+            Classe représentant une Cryptolingua, une créature qui peut se déplacer et parler en cryptant son message.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Cryptolingua.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructeur de la Cryptolingua.
+            </summary>
+            <param name="positionX">Position sur l'axe des X de la Cryptolingua.</param>
+            <param name="positionY">Position sur l'axe des Y de la Cryptolingua.</param>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Cryptolingua.Parler(System.String)">
+            <summary>
+            Fonction qui fait parler la Cryptolingua en cryptant le message avant de l'afficher.
+            </summary>
+            <param name="message">Message à dire.</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Ecosysteme">
+            <summary>
+            Classe représentant un écosystème contenant une liste d'organismes.
+            </summary>
+        </member>
+        <member name="P:TP1_Algo03_VincentSChevrier.Ecosysteme.Organismes">
+            <summary>
+            Liste statique des organismes dans l'écosystème.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Ecosysteme.AjouterOrganisme(TP1_Algo03_VincentSChevrier.Organisme)">
+            <summary>
+            Fonction pour ajouter un organisme à l'écosystème.
+            </summary>
+            <param name="organisme">Organisme à ajouter dans l'écosystème.</param>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Ecosysteme.TrouverOrganismeLePlusProche(TP1_Algo03_VincentSChevrier.Organisme)">
+            <summary>
+            Fonction pour trouver l'organisme le plus proche d'un organisme donné.
+            Math.Abs pour gérer les distances négatives.
+            </summary>
+            <param name="organismeDeDepart">Organisme duquel on trouve l'organisme le plus proche.</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.IDeplacement">
+            <summary>
+            Interface représentant une capacité de déplacement.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.IDeplacement.Deplacement(System.Int32,System.Int32)">
+            <summary>
+            Modèle de la fonction de déplacement.
+            </summary>
+            <param name="deplacementX">Nombre de pas à faire sur l'axe des X.</param>
+            <param name="deplacementY">Nombre de pas à faire sur l'axe des Y.</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.IParler">
+            <summary>
+            Interface représentant une capacité de parler.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.IParler.Parler(System.String)">
+            <summary>
+            Modèle de la fonction pour parler.
+            </summary>
+            <param name="message">Message à dire par un organisme.</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Organisme">
+            <summary>
+            Classe abstraite représentant un organisme avec un nom et une position.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Organisme.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructeur de l'organisme.
+            </summary>
+            <param name="nom">Nom de l'organisme.</param>
+            <param name="positionX">Position sur l'axe des X de l'organisme.</param>
+            <param name="positionY">Position sur l'axe des Y de l'organisme.</param>
+        </member>
+        <member name="P:TP1_Algo03_VincentSChevrier.Organisme.Nom">
+            <summary>
+            Popriété représentant le nom de l'organisme.
+            </summary>
+        </member>
+        <member name="P:TP1_Algo03_VincentSChevrier.Organisme.PositionX">
+            <summary>
+            Propriété représentant la position sur l'axe des X de l'organisme.
+            </summary>
+        </member>
+        <member name="P:TP1_Algo03_VincentSChevrier.Organisme.PositionY">
+            <summary>
+            Propriété représentant la position sur l'axe des Y de l'organisme.
+            </summary>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Plante">
+            <summary>
+            Classe représentant une plante, qui hérite de la classe Organisme.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Plante.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructeur de la plante.
+            </summary>
+            <param name="nom">Nom de la plante.</param>
+            <param name="positionX">Position sur l'axe des X de la plante.</param>
+            <param name="positionY">Position sur l'axe des Y de la plante.</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Program">
+            <summary>
+            Classe principale du programme.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Program.Main(System.String[])">
+            <summary>
+            Fonction principale du programme et utilisée pour tester les différentes fonctionnalités.
+            </summary>
+            <param name="args">Arguments (non-utilisé).</param>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Utilitaires">
+            <summary>
+            Classe utilitaire contenant des fonctions statiques.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Utilitaires.Cryptage(System.String,System.String)">
+            <summary>
+            Fonction de cryptage d'un message en utilisant un simple chiffrement par substitution.
+            </summary>
+            <param name="message">Message à crypter.</param>
+            <returns>Message crypté.</returns>
+        </member>
+        <member name="T:TP1_Algo03_VincentSChevrier.Verbaflora">
+            <summary>
+            Classe représentant une Verbaflora, une plante qui peut parler.
+            </summary>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Verbaflora.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructeur de la Verbaflora.
+            </summary>
+            <param name="positionX">Position sur l'axe des X de la Verbaflora.</param>
+            <param name="positionY">Position sur l'axe des Y de la Verbaflora.</param>
+        </member>
+        <member name="M:TP1_Algo03_VincentSChevrier.Verbaflora.Parler(System.String)">
+            <summary>
+            Fonction qui fait parler la Verbaflora en affichant le message avec des emojis de plantes.
+            </summary>
+            <param name="message">Message à dire.</param>
+        </member>
+    </members>
+</doc>

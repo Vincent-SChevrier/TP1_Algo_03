@@ -13,8 +13,6 @@ namespace TP1_Algo03_VincentSChevrier
         /// Modèle de la fonction pour parler.
         /// </summary>
         /// <param name="message">Message à dire par un organisme.</param>
-        public void Parler(string message)
-        {
-        }
+        void Parler(string message);
     }
 }
