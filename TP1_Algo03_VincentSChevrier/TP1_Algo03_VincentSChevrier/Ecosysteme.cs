@@ -27,38 +27,42 @@ namespace TP1_Algo03_VincentSChevrier
         /// Fonction pour trouver l'organisme le plus proche d'un organisme donné.
         /// Math.Abs pour gérer les distances négatives.
         /// </summary>
-        /// <param name="organismeDeDepart">Organisme duquel on trouve l'organisme le plus proche.</param>
-        public static void TrouverOrganismeLePlusProche(Organisme organismeDeDepart)
+        /// <param name="organismeCible">Organisme duquel on trouve l'organisme le plus proche.</param>
+        public static void TrouverOrganismeLePlusProche(Organisme organismeCible) // 1
         {
-            Organisme organismeLePlusProche = null!;
-            foreach (Organisme organisme in Organismes)
+            Organisme organismeLePlusProche = null!; // 1
+
+            foreach (Organisme organisme in Organismes) // n
             {
-                if (organisme != organismeDeDepart)
+                if (organisme != organismeCible) // n ou 1 car une seule probabilité simple (1 check)
                 {
-                    if (organismeLePlusProche == null)
+                    if (organismeLePlusProche == null) // n ou 1 car une seule probabilité simple (1 check)
                     {
-                        organismeLePlusProche = organisme;
+                        organismeLePlusProche = organisme; // 1
                     }
-                    else
+                    else // autre donc aucune valeur O
                     {
-                        double distanceActuelle = Math.Abs(organismeDeDepart.PositionX - organisme.PositionX) + Math.Abs(organismeDeDepart.PositionY - organisme.PositionY);
-                        double distancePlusProche = Math.Abs(organismeDeDepart.PositionX - organismeLePlusProche.PositionX) + Math.Abs(organismeDeDepart.PositionY - organismeLePlusProche.PositionY);
-                        if (distanceActuelle < distancePlusProche)
+                        double distanceActuelle = Math.Abs(organismeCible.PositionX - organisme.PositionX) + Math.Abs(organismeCible.PositionY - organisme.PositionY); // 1
+                        double distancePlusProche = Math.Abs(organismeCible.PositionX - organismeLePlusProche.PositionX) + Math.Abs(organismeCible.PositionY - organismeLePlusProche.PositionY); // 1
+
+                        if (distanceActuelle < distancePlusProche) // n ou 1 car une seule probabilité simple (1 check)
                         {
-                            organismeLePlusProche = organisme;
+                            organismeLePlusProche = organisme; // 1
                         }
                     }
                 }
             }
 
-            if (organismeLePlusProche != null)
+            if (organismeLePlusProche != null) // n ou 1 car une seule probabilité simple (1 check)
             {
-                Console.WriteLine($"L'organisme le plus proche de {organismeDeDepart.Nom} est {organismeLePlusProche.Nom} situé en ({organismeLePlusProche.PositionX}, {organismeLePlusProche.PositionY})");
+                Console.WriteLine($"L'organisme le plus proche de {organismeCible.Nom} est {organismeLePlusProche.Nom} situé en ({organismeLePlusProche.PositionX}, {organismeLePlusProche.PositionY})"); // 1
             }
-            else
+            else // autre donc aucune valeur O
             {
-                Console.WriteLine($"{organismeDeDepart.Nom} n'a pas d'autres organismes à proximité.");
+                Console.WriteLine($"{organismeCible.Nom} n'a pas d'autres organismes à proximité."); // 1
             }
+
+            // n + 11 => O(n)
         }
     }
 }
