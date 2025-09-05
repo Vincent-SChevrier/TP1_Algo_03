@@ -16,6 +16,7 @@ namespace TP1_Algo03_VincentSChevrier
         /// <param name="positionY">Position sur l'axe des Y de la Verbaflora.</param>
         public Verbaflora(int positionX, int positionY) : base("Verbaflora", positionX, positionY)
         {
+
         }
 
         /// <summary>

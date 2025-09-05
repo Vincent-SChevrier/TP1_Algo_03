@@ -14,29 +14,34 @@ namespace TP1_Algo03_VincentSChevrier
         /// </summary>
         /// <param name="message">Message à crypter.</param>
         /// <returns>Message crypté.</returns>
-        public static string Cryptage(string message, string chaineEncrypte)
+        public static string Cryptage(string message)
         {
-            string chaineOriginal = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string newChaineChar = string.Empty;
+            string chaineOriginal = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; // 1
+            string chaineEncrypte = "cjdgoyhktvxfzelquapwmbsnriCJDGOYHKTVXFZELQUAPWMBSNRI"; // 1
+            string newChaineChar = string.Empty; // 1
 
-            for (int i = 0; i < message.Length; i++)
+            for (int i = 0; i < message.Length; i++) // n
             {
-                foreach (char lettre in chaineOriginal)
+                foreach (char lettre in chaineOriginal) // 52
                 {
-                    if (lettre == message[i])
+                    if (lettre == message[i]) // 52
                     {
-                        newChaineChar += chaineEncrypte[Array.IndexOf(chaineOriginal.ToCharArray(), lettre)];
-                        break;
+                        newChaineChar += chaineEncrypte[Array.IndexOf(chaineOriginal.ToCharArray(), lettre)]; // 1
+                        break; // 1
                     }
-                    else if (lettre == chaineOriginal[^1])
+                    else if (lettre == chaineOriginal[^1]) // 52
                     {
-                        newChaineChar += message[i];
-                        break;
+                        newChaineChar += message[i]; // 1
+                        break; // 1
                     }
                 }
             }
 
-            return newChaineChar;
+            return newChaineChar; // 1
+
+            // = 1 + 1 + 1 + n * (52 + 1 + 1 + 52 + 1 + 1) + 1
+            // = 3 + 108n + 1
+            // = O(n)
         }
     }
 }

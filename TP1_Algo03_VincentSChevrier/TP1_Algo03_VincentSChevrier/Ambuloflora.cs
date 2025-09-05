@@ -27,36 +27,40 @@ namespace TP1_Algo03_VincentSChevrier
         /// <param name="deplacementY">Nombre de pas à faire sur l'axe des Y.</param>
         public void Deplacement(int deplacementX, int deplacementY)
         {
-            int compteur = 0;
-            for (int i = Math.Abs(deplacementX); i > 0; i--)
+            int compteur = 0; // 1
+            for (int i = Math.Abs(deplacementX); i > 0; i--) // n
             {
-                if (compteur == 3)
+                if (compteur == 3) // n
                 {
-                    PositionX -= deplacementX / Math.Abs(deplacementX);
-                    compteur = 0;
-                    i++;
+                    PositionX -= deplacementX / Math.Abs(deplacementX); // 1
+                    compteur = 0; // 1
+                    i++; // 1
                 }
-                else
+                else // n
                 {
-                    PositionX += deplacementX / Math.Abs(deplacementX);
-                    compteur++;
+                    PositionX += deplacementX / Math.Abs(deplacementX); // 1
+                    compteur++; // 1
                 }
             }
 
-            for (int i = Math.Abs(deplacementY); i > 0; i--)
+            for (int i = Math.Abs(deplacementY); i > 0; i--) // n
             {
-                if (compteur == 3)
+                if (compteur == 3) // n
                 {
-                    PositionY -= deplacementY / Math.Abs(deplacementY);
-                    compteur = 0;
-                    i++;
+                    PositionY -= deplacementY / Math.Abs(deplacementY); // 1
+                    compteur = 0; // 1
+                    i++; // 1
                 }
-                else
+                else // n
                 {
-                    PositionY += deplacementY / Math.Abs(deplacementY);
-                    compteur++;
+                    PositionY += deplacementY / Math.Abs(deplacementY); // 1
+                    compteur++; // 1
                 }
             }
+
+            // = 1 + n + n + 1 + 1 + 1 + n + 1 + 1 + n + n + 1 + 1 + 1 + n + 1 + 1
+            // = 6n + 11
+            // = O(n)
         }
     }
 }

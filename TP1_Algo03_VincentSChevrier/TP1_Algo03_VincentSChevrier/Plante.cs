@@ -17,6 +17,7 @@ namespace TP1_Algo03_VincentSChevrier
         /// <param name="positionY">Position sur l'axe des Y de la plante.</param>
         public Plante(string nom, int positionX, int positionY) : base(nom, positionX, positionY)
         {
+
         }
     }
 }

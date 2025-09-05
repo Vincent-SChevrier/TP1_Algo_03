@@ -16,6 +16,7 @@ namespace TP1_Algo03_VincentSChevrier
         /// <param name="deplacementY">Nombre de pas à faire sur l'axe des Y.</param>
         protected void Deplacement(int deplacementX, int deplacementY)
         {
+
         }
     }
 }
